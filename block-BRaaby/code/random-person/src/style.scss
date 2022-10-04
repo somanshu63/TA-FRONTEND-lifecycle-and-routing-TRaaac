@@ -1,0 +1,346 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+//
+// general
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.text-center {
+  text-align: center;
+}
+$grayColor: #637e94;
+$lightGrayColor: #eff5fa;
+$blackColor: #2d2d38;
+$whiteColor: white;
+.gray {
+  color: $grayColor;
+}
+.lightGray {
+  color: $lightGrayColor;
+}
+.black {
+  color: $blackColor;
+}
+.white {
+  color: $whiteColor;
+}
+.fs-24 {
+  font-size: 24px;
+}
+.fs-20 {
+  font-size: 20px;
+}
+.fs-16 {
+  font-size: 16px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.fs-18 {
+  font-size: 18px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.margin-1 {
+  margin: 1rem;
+}
+.margin-1-0 {
+  margin: 1rem 0;
+}
+.margin-0-1 {
+  margin: 0 1rem;
+}
+.margin-2 {
+  margin: 2rem;
+}
+.margin-2-0 {
+  margin: 2rem 0;
+}
+.margin-0-2 {
+  margin: 0 2rem;
+}
+.padding-1 {
+  padding: 1rem;
+}
+.padding-1-0 {
+  padding: 1rem 0;
+}
+.padding-0-1 {
+  padding: 0 1rem;
+}
+.margin-5px {
+  margin: 5px 0;
+}
+a {
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.text-cap {
+  text-transform: capitalize;
+}
+.text-upp {
+  text-transform: uppercase;
+}
+.inline-block {
+  display: inline-block;
+}
+button {
+  cursor: pointer;
+}
+.padding-5px {
+  padding: 5px;
+}
+
+.bg {
+  width: 100vw;
+  height: 50vh;
+}
+.bg-black {
+  @extend .bg;
+  background-color: $blackColor;
+}
+.bg-lightgray {
+  @extend .bg;
+  background-color: $lightGrayColor;
+}
+.main {
+  position: relative;
+}
+.person {
+  width: 60%;
+  height: 60%;
+  top: 30%;
+  left: 20%;
+  right: 20%;
+  bottom: 10%;
+  position: absolute;
+}
+.person-bg-lightgray {
+  background-color: $lightGrayColor;
+  height: 25%;
+  width: 100%;
+}
+.details {
+  background-color: white;
+  height: 75%;
+}
+
+.progress {
+  position: absolute;
+  top: 48%;
+  left: 43%;
+  right: 47%;
+  height: 10px;
+  width: 200px;
+  border: 10px solid #f4a261;
+  border-radius: 15px;
+}
+.progress .color {
+  position: absolute;
+  top: -5px;
+  background-color: #ffffff;
+  width: 0px;
+  height: 10px;
+  border-radius: 15px;
+  animation: progres 2s infinite linear;
+}
+@keyframes progres {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 50%;
+  }
+  50% {
+    width: 75%;
+  }
+  75% {
+    width: 85%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.fa-solid {
+  color: $grayColor;
+  margin: 0.5rem 2.5rem;
+}
+.fa-solid:hover {
+  color: #2d2d38;
+}
+.details {
+  position: relative;
+  padding-top: 4rem;
+}
+.image {
+  position: absolute;
+  top: -4rem;
+  left: 42%;
+  width: 100px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 0 4px 1px $grayColor;
+}
+.random {
+  background-color: rgb(66, 147, 253);
+  border: 2px solid blue;
+  border-radius: 3px;
+}
